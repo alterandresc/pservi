@@ -1,0 +1,33 @@
+body {
+
+  padding-top: 50px;
+}
+.starter-template {
+  padding: 40px 15px;
+}
+
+.navbar
+{
+	background-color:#9ac75f;
+	color: #fffff;
+	
+}
+
+.navbar a:link
+{
+	color: #999999;
+}
+
+.navbar-inverse a:link
+{
+	color:#FFFFFF;
+}
+
+.navbar-fixed-top a:link{
+color:#FFFFFF;
+}
+
+navbar-nav a
+{
+	color:#FFFFFF;
+}

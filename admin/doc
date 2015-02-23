@@ -1,0 +1,11 @@
+Base de datos con las configuraciones de ../core/database
+
+admin_process.php: conjunto de funciones para recuperar datos
+edit_poll.php:  form para editar la encuesta, de ahí se envía a updatePoll.php para guardarla 
+updatePoll.php:  recibe datos del form para guardar la encuesta editada
+pdvs.php:   lista de los pdvs existentes en la base de datos
+updatePdv.php:  recibe datos del form para guardar el pdv editado y lo guarda
+addPdv.php:   interfaz para el form de un nuevo pdv
+savePdv.php   almacena el nuevo pdv
+users.php       Muestra la lista de usuarios y permite agregar nuevos usuarios
+edit_user.php    Muestra formulario para la edición de usuarios
