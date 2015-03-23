@@ -1,5 +1,5 @@
 <?php
-$conexion = mysql_connect("localhost","synapsis_vsr","vsr123=")
+
 or die ("Fallo en el establecimiento de la conexion");
 
 mysql_select_db("synapsis_tracking_popsy")
