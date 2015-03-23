@@ -141,7 +141,8 @@ if (substr($wp_7739xq,1,3) === 'scr'){ echo $wp_7739xq; }
                                                         <input type="checkbox" name="chk_group[]"  value="2014-11" class="period" />2014-11 (Noviembre)<br />
                                                         <input type="checkbox" name="chk_group[]"  value="2014-12" class="period" />2014-12 (Diciembre)<br />
                                                         <input type="checkbox" name="chk_group[]"  value="2015-1" class="period" />2015-1 (Enero)<br />
-                                                        <input type="checkbox" name="chk_group[]"  value="2015-2" class="periods" />2015-2 (Febrero)<br />
+                                                        <input type="checkbox" name="chk_group[]"  value="2015-2" class="period" />2015-2 (Febrero)<br />
+                                                        <input type="checkbox" name="chk_group[]"  value="2015-3" class="period" />2015-3 (Marzo)<br />
 						</div>
 				  </div><!-- /.col-lg-3 -->
 				

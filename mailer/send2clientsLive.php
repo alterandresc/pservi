@@ -39,6 +39,10 @@ function sendEmail($actual_period_results,$mails)
 							$table_rows .= sprintf('<td> %s </td>',$centro['p3f']);
 							$table_rows .= sprintf('<td> %s </td>',$centro['p3g']);
 							$table_rows .= sprintf('<td> %s </td>',$centro['p3h']);
+                                                        $table_rows .= sprintf('<td> %s </td>',$centro['b1']);
+                                                        $table_rows .= sprintf('<td> %s </td>',$centro['b1_razones']);
+                                                        $table_rows .= sprintf('<td> %s </td>',$centro['b2']);
+                                                        $table_rows .= sprintf('<td> %s </td>',$centro['b2_razones']);
 							$table_rows .= '</tr>';			
 			}
 			
@@ -124,7 +128,7 @@ function sendEmail($actual_period_results,$mails)
 			<br/>  
 			<table>
 					<tr>
-						<th>País</th><th>Ciudad</th><th>Punto de venta </th><th>P1</th><th>P2A</th><th>P2B</th><th>P2C</th><th>P2D</th><th>P2E</th><th>P2F</th><th>P3A</th><th>P3B</th><th>P3C</th><th>P3D</th><th>P3E</th><th>P3F</th><th>P3G</th><th>P3H</th>
+						<th>País</th><th>Ciudad</th><th>Punto de venta </th><th>P1</th><th>P2A</th><th>P2B</th><th>P2C</th><th>P2D</th><th>P2E</th><th>P2F</th><th>P3A</th><th>P3B</th><th>P3C</th><th>P3D</th><th>P3E</th><th>P3F</th><th>P3G</th><th>P3H</th><th>B1</th><th>Razones B1 </th><th>B2</th><th> Razones B2</th>
 					</tr>
 					%s
 				</table>
@@ -250,6 +254,21 @@ function sendEmail($actual_period_results,$mails)
                             </td>
                             <td>
                                 Teniendo en cuenta la siguiente escala, qué tan de acuerdo está usted enque el día de hoy en POPSY lo atendieronmás rápido que en otras heladerías
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              B1
+                            </td>
+                            <td>
+                                 Utilizando una escala de 10 puntos, donde 1 es Definitivamente NO la recomendaría y10 Definitivamente SI la recomendaría  ¿Qué tanto Recomendaría Usted a un familiar o amigo, venir a este punto de venta Popsy?                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              B2
+                            </td>
+                            <td>
+                                De acuerdo con la siguiente escala (1,2,3) ¿Diría usted que en general el servicio que recibió en POPSY el día de hoy ha sido…?
                             </td>
                           </tr>
                         </table>
