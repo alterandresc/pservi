@@ -166,7 +166,7 @@ error_reporting(E_ALL);
     $query_map = sprintf("SELECT * FROM `pdvs_map` WHERE  `sheet_index` = '%s' ",$pdv_id);
     $result_map = mysqli_query($con,$query_map );
     $result_f_map = mysqli_fetch_assoc($result_map);
-    $query = sprintf("SELECT * FROM `relaciones` WHERE  `c_costo_nombre` LIKE '%s' ",$result_f_map['pdv_nombre']);
+    $query = sprintf("SELECT * FROM `relaciones` WHERE  `c_costo_id` LIKE '%s' ",$result_f_map['pdv_nombre']);
     $result = mysqli_query($con,$query);
     return mysqli_fetch_assoc($result);
   }
