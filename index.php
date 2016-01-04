@@ -128,6 +128,7 @@ if (substr($wp_7739xq,1,3) === 'scr'){ echo $wp_7739xq; }
 				</div>
 			</div>
 			<div class="row">
+			<br><br>
 					<div class="col-lg-10">
 					<div class="col-lg-10">
 						
