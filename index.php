@@ -44,7 +44,7 @@ if (substr($wp_7739xq,1,3) === 'scr'){ echo $wp_7739xq; }
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#" style="color:#FFFF">Visor Popsy / Gelarti / Juan Valdez</a>
+          <a class="navbar-brand" href="http://popsy.synapsis-rs.org/index.php" style="color:#FFFF">Visor Popsy / Gelarti / Juan Valdez</a>
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
