@@ -128,7 +128,7 @@ if (substr($wp_7739xq,1,3) === 'scr'){ echo $wp_7739xq; }
 				</div>
 			</div>
 			<div class="row">
-					<div class="col-md-3">
+					<div class="col-md-7">
 					<div class="col-lg-6">
 						
 						Periodo
