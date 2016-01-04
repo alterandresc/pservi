@@ -123,37 +123,39 @@ if (substr($wp_7739xq,1,3) === 'scr'){ echo $wp_7739xq; }
 							</div>
 						</div>
 					</div>
-				
+				<br>
 					<div class="col-lg-6">
+						
 						Periodo
+						
 						<div>
-                                                <input type="checkbox" name="chk_group[]"  value="2013-12" class="period" />2013-12 (Diciembre)<br />
-                                                <input type="checkbox" name="chk_group[]"  value="2014-1" class="period" />2014-01 (Enero)<br />
-                                                <input type="checkbox" name="chk_group[]"  value="2014-2" class="period" />2014-02 (Febrero)<br />
-                                                <input type="checkbox" name="chk_group[]"  value="2014-3" class="period" />2014-03 (Marzo)<br />
-                                                <input type="checkbox" name="chk_group[]"  value="2014-4" class="period" />2014-04 (Abril)<br />
-                                                <input type="checkbox" name="chk_group[]"  value="2014-5" class="period" />2014-05 (Mayo)<br />
-                                                <input type="checkbox" name="chk_group[]"  value="2014-6" class="period" />2014-06 (Junio)<br />
-                                                <input type="checkbox" name="chk_group[]"  value="2014-7" class="period" />2014-07 (Julio)<br />
-                                                <input type="checkbox" name="chk_group[]"  value="2014-8" class="period" />2014-08 (Agosto)<br />
-                                                <input type="checkbox" name="chk_group[]"  value="2014-9" class="period" />2014-09 (Septiembre)<br />
-                                                <input type="checkbox" name="chk_group[]"  value="2014-10" class="period" />2014-10 (Octubre)<br />
-                                                <input type="checkbox" name="chk_group[]"  value="2014-11" class="period" />2014-11 (Noviembre)<br />
-                                                <input type="checkbox" name="chk_group[]"  value="2014-12" class="period" />2014-12 (Diciembre)<br />
-                                                <input type="checkbox" name="chk_group[]"  value="2015-1" class="period" />2015-1 (Enero)<br />
-                                                <input type="checkbox" name="chk_group[]"  value="2015-2" class="period" />2015-2 (Febrero)<br />
-                                                <input type="checkbox" name="chk_group[]"  value="2015-3" class="period" />2015-3 (Marzo)<br />
-                                                <input type="checkbox" name="chk_group[]"  value="2015-4" class="period periods" />2015-4 (Abril)<br />
-                                                <input type="checkbox" name="chk_group[]"  value="2015-5" class="period periods" />2015-5 (Mayo)<br />
-                                                <input type="checkbox" name="chk_group[]"  value="2015-6" class="period periods" />2015-6 (Junio)<br />
-                                                <input type="checkbox" name="chk_group[]"  value="2015-7" class="period periods" />2015-7 (Julio)<br />
-                                                <input type="checkbox" name="chk_group[]"  value="2015-8" class="period periods" />2015-8 (Agosto)<br />
-                                                <input type="checkbox" name="chk_group[]"  value="2015-9" class="period periods" />2015-9 (Septiembre)<br />
-                                                <input type="checkbox" name="chk_group[]"  value="2015-10" class="period periods" />2015-10 (Octubre)<br />
-                                                <input type="checkbox" name="chk_group[]"  value="2015-11" class="period periods" />2015-11 (Noviembre)<br />
-                                                <input type="checkbox" name="chk_group[]"  value="2015-12" class="period periods" />2015-12 (Diciembre)<br />
-                                                <input type="checkbox" name="chk_group[]"  value="2016-1" class="period periods" />2016-1 (Enero)<br />
-						</div>
+                                                  <input type="checkbox" name="chk_group[]"  value="2013-12" class="period" />2013-12 (Diciembre)<br />
+                                                  <input type="checkbox" name="chk_group[]"  value="2014-1" class="period" />2014-01 (Enero)<br />
+                                                  <input type="checkbox" name="chk_group[]"  value="2014-2" class="period" />2014-02 (Febrero)<br />
+                                                  <input type="checkbox" name="chk_group[]"  value="2014-3" class="period" />2014-03 (Marzo)<br />
+                                                  <input type="checkbox" name="chk_group[]"  value="2014-4" class="period" />2014-04 (Abril)<br />
+                                                  <input type="checkbox" name="chk_group[]"  value="2014-5" class="period" />2014-05 (Mayo)<br />
+                                                  <input type="checkbox" name="chk_group[]"  value="2014-6" class="period" />2014-06 (Junio)<br />
+                                                  <input type="checkbox" name="chk_group[]"  value="2014-7" class="period" />2014-07 (Julio)<br />
+                                                  <input type="checkbox" name="chk_group[]"  value="2014-8" class="period" />2014-08 (Agosto)<br />
+                                                  <input type="checkbox" name="chk_group[]"  value="2014-9" class="period" />2014-09 (Septiembre)<br />
+                                                  <input type="checkbox" name="chk_group[]"  value="2014-10" class="period" />2014-10 (Octubre)<br />
+                                                  <input type="checkbox" name="chk_group[]"  value="2014-11" class="period" />2014-11 (Noviembre)<br />
+                                                  <input type="checkbox" name="chk_group[]"  value="2014-12" class="period" />2014-12 (Diciembre)<br />
+                                                  <input type="checkbox" name="chk_group[]"  value="2015-1" class="period" />2015-1 (Enero)<br />
+                                                  <input type="checkbox" name="chk_group[]"  value="2015-2" class="period" />2015-2 (Febrero)<br />
+                                                  <input type="checkbox" name="chk_group[]"  value="2015-3" class="period" />2015-3 (Marzo)<br />
+                                                  <input type="checkbox" name="chk_group[]"  value="2015-4" class="period periods" />2015-4 (Abril)<br />
+                                                  <input type="checkbox" name="chk_group[]"  value="2015-5" class="period periods" />2015-5 (Mayo)<br />
+                                                  <input type="checkbox" name="chk_group[]"  value="2015-6" class="period periods" />2015-6 (Junio)<br />
+                                                  <input type="checkbox" name="chk_group[]"  value="2015-7" class="period periods" />2015-7 (Julio)<br />
+                                                  <input type="checkbox" name="chk_group[]"  value="2015-8" class="period periods" />2015-8 (Agosto)<br />
+                                                  <input type="checkbox" name="chk_group[]"  value="2015-9" class="period periods" />2015-9 (Septiembre)<br />
+                                                  <input type="checkbox" name="chk_group[]"  value="2015-10" class="period periods" />2015-10 (Octubre)<br />
+                                                  <input type="checkbox" name="chk_group[]"  value="2015-11" class="period periods" />2015-11 (Noviembre)<br />
+                                                  <input type="checkbox" name="chk_group[]"  value="2015-12" class="period periods" />2015-12 (Diciembre)<br />
+                                                  <input type="checkbox" name="chk_group[]"  value="2016-1" class="period periods" />2016-1 (Enero)<br />
+                                              </div>
 				  </div><!-- /.col-lg-3 -->
 				
 				</div>
