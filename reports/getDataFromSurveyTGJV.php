@@ -159,6 +159,11 @@ error_reporting(E_ALL);
       {
         echo "ERROR INSERTANDO SRVID: ".$map_array['SRVID'].PHP_EOL;
       }
+      else
+      {
+	echo "ENCUESTA INSERTADA CON SRVID: ".$map_array['SRVID'].PHP_EOL;
+      }
+    //echo $insert_query;
   }
 
   function getPDVInfo($pdv_id, $con)
