@@ -123,7 +123,7 @@ function sendEmail($actual_period_results,$mails)
 				</style>
 			</head>
 			<body>
-				<p>En la tabla se encuentran las evaluaciones realizadas en los últimos 10 minutos<p>
+				<p>En la tabla se encuentran las evaluaciones realizadas en los últimos días<p>
 			<br/>
 			<br/>  
 			<table>

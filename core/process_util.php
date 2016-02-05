@@ -2,59 +2,67 @@
 
 ini_set("log_errors", 5);
 ini_set("error_log", "ac_errors.log");
-error_log( "Hello, errors!" );
+
 	function executeRequest($params)
 	{
-		
+		$can_datos = hallar_cantidad_datos($params);
+                if(cacheIsValid($can_datos, $params))
+                {
+                  return getCacheValue($params);
+                }
+                $to_return = "";
 		switch ($params['nombre_grafica']) {
 			case 'general_acum':
-				return obtener_general_acum($params);
+                                $to_return = obtener_general_acum($params);
 				break;
 			case 'obtener_promediop2_acum':
-				return obtener_promediop2_acum($params);
+				$to_return =  obtener_promediop2_acum($params);
 				break;
 			case 'obtener_promediop3_acum':
-				return obtener_promediop3_acum($params);
+				$to_return =  obtener_promediop3_acum($params);
 				break;
 			case 'obtener_satisfaccion_general_periodo':
-				return obtener_satisfaccion_general_periodo($params);
+				$to_return =  obtener_satisfaccion_general_periodo($params);
 				break;
 			case 'obtener_satisfaccion_general_periodo_multi':
-				return obtener_satisfaccion_general_periodo_multi($params);
+				$to_return =  obtener_satisfaccion_general_periodo_multi($params);
 				break;
 			case 'obtener_promedio_acumulado_multi':
-				return obtener_promedio_acumulado_multi($params);
+				$to_return =  obtener_promedio_acumulado_multi($params);
 				break;
 			case 'obtener_general_acum_b':
-				return obtener_general_acum_b($params);
+				$to_return =  obtener_general_acum_b($params);
 				break;
 			case 'obtener_satisfaccion_general_periodo_b':
-				return obtener_satisfaccion_general_periodo_b($params);
+				$to_return =  obtener_satisfaccion_general_periodo_b($params);
 				break;
 			case 'obtener_general_acum_b2':
-				return obtener_general_acum_b2($params);
+				$to_return =  obtener_general_acum_b2($params);
 				break;
 			case 'obtener_satisfaccion_general_periodo_b2':
-				return obtener_satisfaccion_general_periodo_b2($params);
+				$to_return =  obtener_satisfaccion_general_periodo_b2($params);
 				break;
 			case 'obtener_general_acum_tiendas':
-				return obtener_general_acum_tiendas($params);
+				$to_return =  obtener_general_acum_tiendas($params);
 				break;
 			case 'obtener_general_acum_tiendas_relojes':
-				return obtener_general_acum_tiendas_relojes($params);
+				$to_return =  obtener_general_acum_tiendas_relojes($params);
 				break;
 			case 'obtener_general_acum_tiendas_v2':
-				return obtener_general_acum_tiendas_v2($params);
+				$to_return =  obtener_general_acum_tiendas_v2($params);
 				break;
 			case 'obtener_promedio_acumulado_pregunta':
-				return obtener_promedio_acumulado_pregunta($params);
+				$to_return =  obtener_promedio_acumulado_pregunta($params);
 				break;
 			case 'obtener_indice_tienda':
-				return obtener_indice_tienda($params['pregunta'],4.0,2.9,20,20*0.8,0);
+				$to_return =  obtener_indice_tienda($params['pregunta'],4.0,2.9,20,20*0.8,0);
 				break;
 			case 'obtener_pdvs_segun_filtros':
-				return obtener_pdvs_segun_filtros($params);
+				$to_return =  obtener_pdvs_segun_filtros($params);
+				break;
 		}
+		generateCache($can_datos,$params,$to_return);
+		return $to_return;
 	}
 	
 	function obtenerQueryLastId($id)
@@ -1272,6 +1280,7 @@ error_log( "Hello, errors!" );
 	
 	function obtener_general_acum_tiendas_v2($params)
 	{
+//           return "hola";
 		$dataResult = array();
 		$dataResult[] = array('x','');
 		$lId = $params['last-id'];
@@ -1280,11 +1289,40 @@ error_log( "Hello, errors!" );
 		{
 			foreach($params['periods'] as $period)
 			{
+                                                
+                            $pais = $params['pais'];
+                            $ciudad = $params['ciudad'];
+                            $region = $params['region'];
+                            $zona = $params['zona'];
+                            $unegocio = $params['negocio'];
+                            $bandera = $params['bandera'];
+                            $pdv = $params['pdv'];
+                            $lId = $params['last-id'];
+                            
+                            $pdvQuery = obtenerQueryPdvAcum($pdv);
+                            $ciudadQuery = obtenerQueryCuidad($ciudad);
+                            $periodosQuery = obtenerQueryPeriodo($params['periods']);
+                            $paisQuery = obtenerQueryPais($pais);
+                            $regionQuery = obtenerQueryRegion($region);
+                            $zonaQuery = obtenerQueryZona($zona);
+                            $razonQuery = obtenerQueryRazon($unegocio);
+                            $banderaQuery = obtenerQueryBandera($bandera);
+                            $lIdQuery = obtenerQueryLastId($lId);
+
+
+                                $tablename="dt_encuesta_popsy";
+                                $query= sprintf("SELECT DISTINCT `pventa` FROM %s where id > 1 %s  %s %s %s %s %s %s %s ",
+                                                $tablename, $periodosQuery,$pdvQuery,$ciudadQuery, $paisQuery, $regionQuery,$zonaQuery, $razonQuery, $banderaQuery, $lIdQuery);
+                            $data = mysql_query($query);
+                            $tmp_period_results =array();
+                            while($row1 = mysql_fetch_assoc($data))
+                            {
+                                $pregunta = $params['pregunta'];
 				
 				//obtener los promedios acumulados para el pdv en el periodo
 				$tmpParams = $params;
 				$tmpParams['periods'] = array($period);
-				
+				$tmpParams['pdv'] = $row1["pventa"];
 				
 				$pp1 = procesar_p1_general_acum_tiendas($tmpParams);
 					
@@ -1330,11 +1368,18 @@ error_log( "Hello, errors!" );
 				
 				
 				$pb2 = procesar_b2_general_acum_tiendas($tmpParams);
+				$tmp_period_results[] = $pp1 +$pp2a +$pp2b + $pp2c+$pp2d +$pp2e + $pp2f +$pp3a +$pp3b +$pp3c +$pp3d +$pp3e +$pp3f +$pp3g +$pp3h + $pb1 + $pb2;
 				
+                            }
+//                                 var_dump($tmp_period_results);
+                                $indice =0;
+                                if(sizeof($tmp_period_results)> 0)
+                                {
+                                  $indice= array_sum($tmp_period_results)/sizeof($tmp_period_results);
+                                }
 				$num_datos = hallar_cantidad_datos($tmpParams);
 				
 				$period = $period."- ".$num_datos." datos" ;
-				$indice = $pp1 +$pp2a +$pp2b + $pp2c+$pp2d +$pp2e + $pp2f +$pp3a +$pp3b +$pp3c +$pp3d +$pp3e +$pp3f +$pp3g +$pp3h + $pb1 + $pb2;
 
 				if($indice > 0 )
 				{

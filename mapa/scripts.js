@@ -2,10 +2,10 @@
 
 // The web service URL from Drive 'Deploy as web app' dialog.
 var DATA_SERVICE_URL = "https://script.google.com/macros/s/AKfycbwj52hkFlslYBwkQ9YbY17SDrkQscX_ILvG-xf18iW9jc_G0dQC/exec?jsonp=callback";
-var $icono0 = "http://www.synapsis-rs.com/gris.png";
-var $icono1 = "http://www.synapsis-rs.com/rojo.png";
-var $icono2 = "http://www.synapsis-rs.com/naranja.png";
-var $icono3 = "http://www.synapsis-rs.com/verde.png";
+var $icono0 = "http://www.synapsis-rs.org/gris.png";
+var $icono1 = "http://www.synapsis-rs.org/rojo.png";
+var $icono2 = "http://www.synapsis-rs.org/naranja.png";
+var $icono3 = "http://www.synapsis-rs.org/verde.png";
 // icon: 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=A|000000|FFF',
 // http://maps.google.com/mapfiles/ms/icons/blue-dot.png
 var map;

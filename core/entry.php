@@ -4,6 +4,7 @@
         ini_set("error_log", "aerror.log");
 	require_once('conection.php');
 	require_once('params_processor.php');
+        require_once('cache_manager.php');
 	require_once('process_util.php');
 	require_once('process_util_filters.php');
 	

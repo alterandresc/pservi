@@ -111,14 +111,12 @@ function actualizarFiltrosMapa()
 $( ".priority-value" ).change(function() {
 	actualizarFiltros($(this));
 	actualizarFiltrosMapa();
-	drawGraphs();
 });
 
 $( ".period" ).change(function() {
 	$('#acumulado_reloj_1').empty();
 	$('#ultimo_mes').empty();
 	actualizarFiltrosMapa();
-	drawGraphs();
 });
 
 function llenarPaises(paises)
@@ -156,4 +154,7 @@ function inicializarFiltroUnidadNegocio()
 $( document ).ready(function(){
 	inicializarFiltroPais();
 	inicializarFiltroUnidadNegocio();
+        $( "#consult_button" ).click(function() {
+          drawGraphs();
+          });
 });

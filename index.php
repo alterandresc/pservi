@@ -129,7 +129,7 @@ if (substr($wp_7739xq,1,3) === 'scr'){ echo $wp_7739xq; }
 			</div>
 			<div class="row">
 			<br><br>
-					<div class="col-lg-10">
+					<div class="col-lg-12">
 					<div class="col-lg-10">
 						
 						Periodo
@@ -161,9 +161,13 @@ if (substr($wp_7739xq,1,3) === 'scr'){ echo $wp_7739xq; }
                                                   <input type="checkbox" name="chk_group[]"  value="2015-11" class="period periods" />2015-11 (Noviembre)<br />
                                                   <input type="checkbox" name="chk_group[]"  value="2015-12" class="period periods" />2015-12 (Diciembre)<br />
                                                   <input type="checkbox" name="chk_group[]"  value="2016-1" class="period periods" />2016-1 (Enero)<br />
-                                              </div>
+                                              </div
+>
 				  </div><!-- /.col-lg-3 -->
-
+                         <div class="col-lg2"><button id="consult_button" aria-label="Left Align" class="btn btn-default" type="button">
+                                                  Consultar
+                                                  <span aria-hidden="true" class="glyphicon glyphicon-stats"></span>
+                                                </button>  </div>
 					</div>
 			</div>
 		<hr />  	

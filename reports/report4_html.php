@@ -170,13 +170,9 @@ header('Content-Type: text/html; charset=UTF-8');
 										"p3h" => $n_p3h,
 										"detractor" => $detractor,
 	  									"expectativa" => $expectativa);  
-          echo "<td>".$row['c_costo_nombre']."</td>"; 
-          echo "<td>".$row['pais']."</td>";
-          echo "<td>".$row['regional']."</td>";
+
+
           echo "<td>".$row['zona']."</td>";
-          echo "<td>".$row['ciudad']."</td>";
-          echo "<td>".$row['c_costo_id']."</td>";
-          echo "<td>".$row['unidad_negocio']."</td>";
           echo "<td>".$ponderado."</td>";
           echo "<td>".$n_p1."</td>";
           echo "<td>".$n_p2a."</td>";

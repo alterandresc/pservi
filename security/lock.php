@@ -1,5 +1,5 @@
 <?php
-include('_configurar/config.php');
+//include('_configurar/config.php');
 session_start();
 
 

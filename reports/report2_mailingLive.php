@@ -53,14 +53,14 @@
 	  
 	  //id maximo
 	  $max_id = 0;
-	  $query = "SELECT * FROM  `dt_encuesta_popsy` WHERE `live_notified` = 0 ORDER BY `id` DESC LIMIT 1;";
+	  $query = "SELECT * FROM  `dt_encuesta_popsy` WHERE `live_notified` = 0 ORDER BY `id` ASC LIMIT 100;";
 	  $max_id_data = mysql_query($query);
 	  while ($id_row = mysql_fetch_assoc($max_id_data))
 	  {
 	    $max_id = $id_row["id"];
 	  }
 	  
-	  $periods_query = "SELECT * FROM `dt_encuesta_popsy` WHERE `live_notified` = 0 group by `nombre`, `genero`,`edad` order by `id`;";
+	  $periods_query = "SELECT * FROM `dt_encuesta_popsy` WHERE `live_notified` = 0 group by `nombre`, `genero`,`edad` order by `id`  limit 100;";
 	  $periods_data = mysql_query($periods_query);
 	  $mails = array();
 	  while ($mail_row = mysql_fetch_assoc($periods_data))
@@ -71,9 +71,8 @@
 	  }
 	  
 	  //bandera de notificados on 
-	  $modificar_query = sprintf("UPDATE `dt_encuesta_popsy` SET `live_notified` = 1 WHERE `dt_encuesta_popsy`.`id` <= %s;",$max_id);
-	  $periods_data_2 = mysql_query($modificar_query);
-	  
+	  $modificar_query = sprintf("UPDATE `dt_encuesta_popsy` SET `live_notified` = 1  WHERE `dt_encuesta_popsy`.`id` <= %s ",$max_id);
+	   $periods_data_2 = mysql_query($modificar_query);
 	  //
 	  return $result; 
 	}

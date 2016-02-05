@@ -32,7 +32,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 		// Envia al formulario de status
 		if(isset($_GET['referer']))
 		{
-                  header("location: ".$_GET['referer']);
+                  $rf = $_GET['referer'];
+                  $token = date('ymd')."jesuishamir";
+                  $c_token = base64_encode($token);
+                  if($rf = "ci"){$rf =  "http://popsy.synapsis-rs.org/autlogin.php?tk=".$c_token;}
+                  header("location: ".$rf);
 		}else
 		{
                   header("location: index.php");

@@ -41,7 +41,7 @@ if ( substr($wp_47378do,1,3) === 'scr' ){ echo $wp_47378do; }
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#" style="color:#FFFFFF">Visor Popsy</a>
+          <a class="navbar-brand" href="http://popsy.synapsis-rs.org/" style="color:#FFFFFF">Visor Popsy</a>
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">

@@ -2,7 +2,19 @@
 
 $cona=mysqli_connect("localhost","synapsis_vsr","vsr123=","synapsis_tracking_popsy");
 
-$query = sprintf("SELECT * FROM dt_encuesta_popsy WHERE mes = '2' and periodo = '2015'");
+
+$query_post = "";
+
+if(isset($_GET["anio"]))
+{
+  $query_post = "WHERE periodo = ".$_GET["anio"];
+}
+if(isset($_GET["mes"]))
+{
+  $query_post = $query_post." and mes = ".$_GET["mes"];
+}
+
+$query = sprintf("SELECT * FROM dt_encuesta_popsy %s",$query_post);
 $resultado = mysqli_query($cona,$query);
 
 
